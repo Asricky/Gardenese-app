@@ -1,0 +1,88 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #0f172a;
+  padding: 20px;
+}
+
+/* "Kanvas ponsel" */
+.app {
+  width: 100%;
+  max-width: 420px;               /* kunci tampilan agar tetap mobile di layar besar */
+  height: 100dvh;                  /* penuh tinggi layar di mobile */
+  background: #0f172a;             /* isi app */
+  color: #e5e7eb;
+  display: grid;
+  grid-template-rows: auto 1fr auto; /* topbar, content, tabbar */
+  border-radius: clamp(0px, 2vw, 24px); /* rounded saat di desktop */
+  overflow: hidden;
+  border: 1px solid #1f2937;       /* garis halus saat di desktop */
+  margin: 0 auto;
+  position: relative;
+}
+
+/* Utility classes */
+.app > * {
+  width: 100%;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Input focus styles */
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+}
+
+/* Button hover effects */
+button:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+  transition: all 0.2s ease;
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+/* Link styles */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Scrollbar styling for webkit browsers */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
